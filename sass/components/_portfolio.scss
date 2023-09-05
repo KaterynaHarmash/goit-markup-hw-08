@@ -1,0 +1,97 @@
+.portfolio {
+    @extend %section;
+}
+.filter {
+    @include flex(flex, baseline, center);
+    column-gap: 8px;
+    margin-bottom: 50px;
+    @extend %list;
+}
+
+.portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+
+    @extend %list;
+}
+
+.portfolio__card {
+    @extend %link;
+    display: inline-block;
+    width: 370px;
+
+    color: $primary-text-color;
+    transition: box-shadow 250ms $transition-rule;
+}
+
+.portfolio__card:hover,
+.portfolio__card:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card__img {
+    display: block;
+}
+
+.card__preview {
+    position: relative;
+    overflow: hidden;
+}
+
+.card__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @include flex(flex, center, center);
+    padding-left: 24px;
+    padding-right: 24px;
+
+    background-color: rgba(33, 150, 243, 0.90);
+    transform: translateY(100%);
+    transition: transform $transition-rule;
+}
+
+.card__description {
+    color: $contrast-text-color;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.54px;
+}
+
+.portfolio__card:hover .card__overlay,
+.portfolio__card:focus .card__overlay {
+    transform: translateY(0%);
+}
+
+.card__text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    border-left: 1px solid #EEE;
+    border-right: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+}
+
+.card__title {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.08px;
+    color: $title-color;
+}
+
+.card__tag {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.48px;
+    margin: 0;
+    padding: 0;
+}

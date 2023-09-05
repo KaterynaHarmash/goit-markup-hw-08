@@ -1,0 +1,30 @@
+.header__contacts {
+    @extend %list;
+    @include flex(flex, center, flex-start);
+    margin-left: auto;
+    column-gap: 30px;
+}
+
+.contacts__link {
+    @extend %link;
+    @include flex(flex, center, flex-start);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    color: $primary-text-color;
+    transition: color $transition-rule;
+}
+.contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+    &--email {
+            width: 16px;
+            height: 12px;
+        }
+    
+    &--phone {
+        width: 10px;
+        height: 16px;
+    }
+}

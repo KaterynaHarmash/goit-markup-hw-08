@@ -1,0 +1,24 @@
+.logo {
+    @extend %link;
+    font-family: $logo-font;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.78px;
+}
+.header__logo {
+    margin-right: 93px;
+}
+.footer__logo {
+    margin-bottom: 20px;
+}
+.logo__text {
+    .header__logo & {
+        color: $logo-text-color;
+    }
+    .footer__logo & {
+        color: $contrast-text-color;
+    }
+    &.logo__text--blue {
+        color: $accent-color;
+    }
+}

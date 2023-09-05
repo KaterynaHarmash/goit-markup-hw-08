@@ -1,0 +1,43 @@
+.services {
+    padding-bottom: 94px;
+}
+
+.services .section__title {
+    margin-bottom: 50px;
+}
+
+.services__list {
+    display: flex;
+    column-gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services__item {
+    position: relative;
+}
+.services__img {
+    @extend %image;
+}
+.services__description {
+    position: absolute;
+    height: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+
+    color: $contrast-text-color;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+
+    background: rgba(47, 48, 58, 0.80);
+}

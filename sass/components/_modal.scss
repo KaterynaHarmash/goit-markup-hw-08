@@ -1,0 +1,238 @@
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    visibility: visible;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.20);
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity $transition-rule, visibility $transition-rule;
+    &--hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: collapse;
+        }
+}
+
+.modal {
+    position: relative;
+    transform: scale(1);
+
+    width: 528px;
+    height: 581px;
+
+    background-color: $primary-bg-color;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    transition: transform $transition-rule;
+    .modal__overlay--hidden>& {
+            transform: scale(0);
+        }
+}
+
+ 
+
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+}
+.close-btn {
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.10);
+    background-color: $primary-bg-color;
+    border-radius: 50%;
+    transition: background-color $transition-rule, border-color $transition-rule;
+    cursor: pointer;
+}
+
+.close-btn__icon {
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: -1px;
+
+    fill: $logo-text-color;
+    align-self: flex-end;
+
+    transition: fill $transition-rule;
+}
+
+.modal__close-btn:hover .close-btn__icon,
+.modal__close-btn:focus .close-btn__icon {
+    fill: $accent-color;
+}
+.modal__form {
+    padding: 40px;
+}
+
+.form__title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin-bottom: 12px;
+    margin-top: 0;
+    color: $title-color;
+}
+.form__fields {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+
+    margin-bottom: 30px;
+}
+.form__field-wrapper {
+    width: 100%;
+    text-align: left;
+}
+.form__label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    letter-spacing: 0.12px;
+}
+
+.form__field {
+    position: relative;
+}
+
+.form__input {
+    height: 40px;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    padding-right: 12px;
+
+    font-size: 12px;
+    letter-spacing: 0.12px;
+
+    background: none;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+    transition: border $transition-rule;
+}
+
+.form__icon {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+
+    transition: fill $transition-rule;
+}
+
+.form__field:focus-within .form__input {
+    border: 1px solid $accent-color;
+    outline: none;
+}
+
+.form__field:focus-within .form__icon {
+    fill: $accent-color;
+}
+
+.form__textarea {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.form__policy {
+    position: relative;
+    padding-left: 37px;
+    vertical-align: baseline;
+}
+
+.form__text {
+    color: $primary-text-color;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
+
+.form__checkbox--hidden {
+    position: absolute;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+}
+
+.form__checkbox {
+    cursor: pointer;
+}
+
+.form__checkbox {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: 15px;
+    top: 4px;
+
+    transition: opacity $transition-rule, visibility $transition-rule;
+}
+
+.form__checkbox--unchecked {
+    z-index: 4;
+    opacity: 1;
+}
+
+.form__checkbox--checked {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+}
+
+.form__checkbox:checked+.form__checkbox-wrapper>.form__checkbox--unchecked {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.form__checkbox:checked+.form__checkbox-wrapper>.form__checkbox--checked {
+    visibility: visible;
+    opacity: 1;
+}
+
+.form__link {
+    color: $accent-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    text-decoration-line: underline;
+    transition: color $transition-rule;
+}
+
+.form__link:hover,
+.form__link:focus {
+    color: $title-color;
+}
+
+.form__policy:focus-within .form__checkbox--unchecked,
+.form__policy:focus-within .form__checkbox--checked {
+    outline: 1px solid $accent-color;
+    border-radius: 4px;
+}
+
+.form__btn {
+    height: 50px;
+    padding-left: 52px;
+    padding-right: 52px;
+}

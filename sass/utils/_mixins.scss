@@ -1,0 +1,5 @@
+@mixin flex($type, $vertical-align, $horisontal-align) {
+    display: $type;
+    align-items: $vertical-align;
+    justify-content: $horisontal-align;
+}

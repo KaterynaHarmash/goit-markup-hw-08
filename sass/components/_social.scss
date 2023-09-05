@@ -1,0 +1,35 @@
+.social {
+    @include flex(flex, center, center);
+    list-style: none;
+    column-gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+.social .social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    transition: background-color $transition-rule;
+}
+
+.social .social__link:hover,
+.social .social__link:focus {
+    background-color: $accent-color;
+}
+
+.social .social__icon {
+    width: 20px;
+    height: 20px;
+    fill: $icons-color;
+
+    transition: fill $transition-rule;
+}
+
+.social .social__link:hover .social__icon,
+.social .social__link:focus .social__icon {
+    fill: $contrast-text-color;
+}
