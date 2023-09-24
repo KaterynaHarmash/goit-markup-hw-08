@@ -9,7 +9,11 @@
 
 .clients__list {
     display: flex;
-    column-gap: 30px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 480px) {
+        justify-content: center;
+    }
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -17,7 +21,15 @@
 
 .client__link {
     @include flex(flex, center, center);
-    width: 170px;
+        width: 210px;
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+    }
     height: 92px;
 
     border-radius: 4px;

@@ -60,10 +60,10 @@
     .contacts__link {
         font-size: 12px;
     }
-    .contacts__item:first-child .contacts__link {
+    .header .contacts__item:first-child .contacts__link {
         padding-top: 21px;
     }
-    .contacts__item:last-child .contacts__link {
+    .header .contacts__item:last-child .contacts__link {
         padding-bottom: 21px;
     }
     .contacts__icon {

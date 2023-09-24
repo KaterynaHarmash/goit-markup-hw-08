@@ -102,7 +102,7 @@
             </div>
         </div>
     </header>
-    <!-- <main>
+     <main>
         <section class="hero section">
             <div class="container">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
@@ -221,16 +221,24 @@
                 </ul>
             </div>
         </section>
-        <section class="services section">
+         <section class="services section">
             <div class="container">
                 <h2 class="section__title">Чим ми займаємося</h2>
                 <ul class="services__list">
-                    <li class="services__item"><img class="services__img" src="./images/computer.jpg" alt="Компьютер"
-                            width="370">
+                    <li class="services__item">
+                        <picture class="services__img">
+                            <source srcset="./images/computer.webp 1x, ./images/computer@2x.webp 2x" type="image/webp" />
+                            <source srcset="./images/computer.jpg 1x, ./images/computer@2x.jpg 2x" type="image/jpeg" />
+                            <img src="./images/computer.jpg" alt="Десктопні додатки">
+                        </picture>
                         <p class="services__description">Десктопні додатки</p>
                     </li>
-                    <li class="services__item"><img class="services__img" src="./images/mobile.jpg"
-                            alt="Мобільний телефон" width="370">
+                    <li class="services__item">
+                        <picture class="services__img">
+                            <source srcset="./images/mobile.webp 1x, ./images/mobile@2x.webp 2x" type="image/webp" />
+                            <source srcset="./images/mobile.jpg 1x, ./images/mobile@2x.jpg 2x" type="image/jpeg" />
+                            <img src="./images/mobile.jpg" alt="Мобільні додатки">
+                        </picture>
                         <p class="services__description">Мобільні додатки</p>
                     </li>
                     <li class="services__item"><img class="services__img" src="./images/tablet.jpg" alt="Планшет"
@@ -245,7 +253,11 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="teams__list">
                     <li class="teams__item">
-                        <img class="teams__photo" src="./images/igor.jpg" alt="Ігор Дем'яненко" width="270">
+                        <picture class="teams__photo">
+                            <source srcset="./images/igor.webp 1x, ./images/igor@2x.webp 2x" type="image/webp" />
+                            <source srcset="./images/igor.jpg 1x, ./images/igor@2x.jpg 2x" type="image/jpeg" />
+                            <img src="./images/igor.jpg" alt="Ігор Дем'яненко">
+                        </picture>
                         <div class="teams__text">
                             <h3 class="teams__title">Ігор Дем'яненко</h3>
                             <p class="teams__description">Product Designer</p>
@@ -283,7 +295,11 @@
                         </div>
                     </li>
                     <li class="teams__item">
-                        <img class="teams__photo" src="./images/olga.jpg" alt="Ольга Рєпіна" width="270">
+                        <picture class="teams__photo">
+                            <source srcset="./images/olga.webp 1x, ./images/olga@2x.webp 2x" type="image/webp" />
+                            <source srcset="./images/olga.jpg 1x, ./images/olga@2x.jpg 2x" type="image/jpeg" />
+                            <img src="./images/olga.jpg" alt="Ольга Рєпіна">
+                        </picture>
                         <div class="teams__text">
                             <h3 class="teams__title">Ольга Рєпіна</h3>
                             <p class="teams__description">Frontend Developer</p>
@@ -321,7 +337,11 @@
                         </div>
                     </li>
                     <li class="teams__item">
-                        <img class="teams__photo" src="./images/mykola.jpg" alt="Микола Тарасов" width="270">
+                        <picture class="teams__photo">
+                            <source srcset="./images/mykola.webp 1x, ./images/mykola@2x.webp 2x" type="image/webp" />
+                            <source srcset="./images/mykola.jpg 1x, ./images/mykola@2x.jpg 2x" type="image/jpeg" />
+                            <img src="./images/mykola.jpg" alt="Микола Тарасов">
+                        </picture>
                         <div class="teams__text">
                             <h3 class="teams__title">Микола Тарасов</h3>
                             <p class="teams__description">Marketing</p>
@@ -359,7 +379,11 @@
                         </div>
                     </li>
                     <li class="teams__item">
-                        <img class="teams__photo" src="./images/mykhailo.jpg" alt="Михайло Єрмаков" width="270">
+                        <picture class="teams__photo">
+                            <source srcset="./images/mykhailo.webp 1x, ./images/mykhailo@2x.webp 2x" type="image/webp" />
+                            <source srcset="./images/mykhailo.jpg 1x, ./images/mykhailo@2x.jpg 2x" type="image/jpeg" />
+                            <img src="./images/mykhailo.jpg" alt="Михайло Єрмаков">
+                        </picture>
                         <div class="teams__text">
                             <h3 class="teams__title">Михайло Єрмаков</h3>
                             <p class="teams__description">UI Designer</p>
@@ -520,7 +544,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer> 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>
