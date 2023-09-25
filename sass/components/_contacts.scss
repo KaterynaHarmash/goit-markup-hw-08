@@ -84,7 +84,7 @@
 @media screen and (min-width: 1200px) {
     .header__contacts {
         flex-direction: row;
-        align-items: center;
+        align-items: baseline;
         row-gap: 10px;
     }
     .contacts__item:first-child .contacts__link {

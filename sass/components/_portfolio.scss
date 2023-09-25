@@ -2,14 +2,26 @@
     @extend %section;
 }
 .filter {
-    @include flex(flex, baseline, center);
+    @include flex(flex, baseline, flex-start);
+    max-width: 327px;
     column-gap: 8px;
+    row-gap: 15px;
+    flex-wrap: wrap;
     margin-bottom: 50px;
     @extend %list;
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        max-width: 100%;
+    }
 }
 
 .portfolio__list {
     display: flex;
+    justify-content: center;
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+    }
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 30px;
@@ -20,7 +32,21 @@
 .portfolio__card {
     @extend %link;
     display: inline-block;
-    width: 370px;
+    @media screen and (max-width: 480px) {
+        max-width: 450px;
+    }
+
+    @media screen and (min-width: 481px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+    }
 
     color: $primary-text-color;
     transition: box-shadow 250ms $transition-rule;
@@ -81,6 +107,7 @@
 
 .card__title {
     margin-bottom: 4px;
+    margin-top: 0;
     font-size: 18px;
     font-weight: 700;
     line-height: 2;
