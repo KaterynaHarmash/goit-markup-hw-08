@@ -36,6 +36,7 @@
     border: 1px solid $icons-color;
 
     transition: border-color $transition-rule;
+    transition-delay: 0ms;
 }
 
 .client__link:hover,
@@ -50,6 +51,7 @@
     fill: $icons-color;
 
     transition: fill $transition-rule;
+    transition-delay: 0ms;
 }
 
 .client__link:hover .client__icon,

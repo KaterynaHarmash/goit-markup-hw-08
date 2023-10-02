@@ -28,6 +28,13 @@
 
     @extend %list;
 }
+@media screen and (min-width:768px) and (max-width: 1200px) {
+    .portfolio__item {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
 
 .portfolio__card {
     @extend %link;
@@ -43,6 +50,11 @@
     @media screen and (min-width: 768px) {
         width: 354px;
     }
+    @media screen and (min-width:768px) and (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
 
     @media screen and (min-width: 1200px) {
         width: 370px;
@@ -50,6 +62,7 @@
 
     color: $primary-text-color;
     transition: box-shadow 250ms $transition-rule;
+    transition-delay: 0ms;
 }
 
 .portfolio__card:hover,
@@ -80,6 +93,7 @@
     background-color: rgba(33, 150, 243, 0.90);
     transform: translateY(101%);
     transition: transform $transition-rule;
+    transition-delay: 0ms;
 }
 
 .card__description {
@@ -99,6 +113,10 @@
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        flex-grow: 1;
+    }
 
     border-left: 1px solid #EEE;
     border-right: 1px solid #EEE;

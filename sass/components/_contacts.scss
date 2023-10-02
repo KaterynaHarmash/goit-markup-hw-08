@@ -12,6 +12,7 @@
     font-weight: 500;
     color: $primary-text-color;
     transition: color $transition-rule;
+    transition-delay: 0ms;
 }
 .mobile-menu .contacts {
     @extend %list;
@@ -22,6 +23,9 @@
 }
 .mobile-menu .contacts__item:first-child {
     font-size: 34px;
+    @media screen and (max-width: 479px) {
+        font-size: 24px;
+    }
     letter-spacing: 0.68px;
 
     .contacts__link {
@@ -30,6 +34,9 @@
 }
 .mobile-menu .contacts__item:nth-child(2) {
     font-size: 24px;
+    @media screen and (max-width: 479px) {
+        font-size: 18px;
+    }
     letter-spacing: 0.48px;
 }
 // .contacts__icon {
@@ -59,6 +66,9 @@
     }
     .contacts__link {
         font-size: 12px;
+    }
+    .footer .contacts__link {
+        font-size: 14px;
     }
     .header .contacts__item:first-child .contacts__link {
         padding-top: 21px;

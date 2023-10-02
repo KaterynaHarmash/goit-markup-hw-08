@@ -12,6 +12,7 @@
     box-shadow: 0px 4px 4px 0px $shadow-btn-color;
     cursor: pointer;
     transition: background-color $transition-rule;
+    transition-delay: 0ms;
 
     &:hover, &:focus {
         background-color: $accent-active-color;
@@ -33,6 +34,7 @@
     background-color: $secondary-bg-color;
     cursor: pointer;
     transition: background-color $transition-rule, color $transition-rule, box-shadow $transition-rule; 
+    transition-delay: 0ms;
 
     &:hover, &:focus {
         color: $contrast-text-color;

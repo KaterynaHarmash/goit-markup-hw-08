@@ -16,6 +16,7 @@
     opacity: 1;
     pointer-events: all;
     transition: opacity $transition-rule, visibility $transition-rule;
+    transition-delay: 0ms;
     &--hidden {
             opacity: 0;
             pointer-events: none;
@@ -44,6 +45,8 @@
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     transition: transform $transition-rule;
+    transition-delay: 0ms;
+
     .modal__overlay--hidden>& {
             transform: scale(0);
         }
@@ -64,6 +67,7 @@
     background-color: $primary-bg-color;
     border-radius: 50%;
     transition: background-color $transition-rule, border-color $transition-rule;
+    transition-delay: 0ms;
     cursor: pointer;
 }
 
@@ -81,6 +85,7 @@
     align-self: flex-end;
 
     transition: fill $transition-rule;
+    transition-delay: 0ms;
 }
 
 .modal__close-btn:hover .close-btn__icon,
@@ -148,6 +153,7 @@
     height: 18px;
 
     transition: fill $transition-rule;
+    transition-delay: 0ms;
 }
 
 .form__field:focus-within .form__input {
@@ -221,6 +227,7 @@
     }
 
     transition: opacity $transition-rule, visibility $transition-rule;
+    transition-delay: 0ms;
 }
 
 .form__checkbox--unchecked {
@@ -251,6 +258,7 @@
     letter-spacing: 0.36px;
     text-decoration-line: underline;
     transition: color $transition-rule;
+    transition-delay: 0ms;
     @media screen and (min-width:1200px) {
         letter-spacing: 0.42px;
         font-size: 14px;

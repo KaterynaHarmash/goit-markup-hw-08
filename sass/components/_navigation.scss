@@ -13,12 +13,15 @@
     
     display: inline-block;
     font-size: 40px;
+    @media screen and (max-width: 479px) {
+        font-size: 30px;
+    }
     letter-spacing: 0.8px;
     font-weight: 500;
     color: $title-color;
 
     transition: color $transition-rule;
-
+    transition-delay: 0ms;
     
     .nav__item--current>& {
         color: $accent-color;
@@ -51,6 +54,7 @@
 
     transform: translateX(100%);
     transition: transform 250ms ease-in-out, visibility 250ms ease-in-out;
+    transition-delay: 0ms;
 
     &.is-open {
         visibility: visible;
@@ -72,11 +76,19 @@
 .menu-toggle {
     width: 40px;
     height: 40px;
+    fill: $title-color;
 
     background: none;
     border: none;
     order: 2;
     @include flex(flex, center, center);
+    transition: fill $transition-rule;
+    transition-delay: 0ms;
+}
+.menu-toggle:hover svg,
+.menu-toggle:focus svg
+{
+fill: $accent-color;
 }
 .js-close-menu {
     align-self: flex-end;
