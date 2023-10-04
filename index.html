@@ -241,8 +241,12 @@
                         </picture>
                         <p class="services__description">Мобільні додатки</p>
                     </li>
-                    <li class="services__item"><img class="services__img" src="./images/tablet.jpg" alt="Планшет"
-                            width="370">
+                    <li class="services__item">
+                        <picture class="services__img">
+                            <source srcset="./images/tablet.webp 1x, ./images/tablet@2x.webp 2x" type="image/webp" />
+                            <source srcset="./images/tablet.jpg 1x, ./images/tablet@2x.jpg 2x" type="image/jpeg" />
+                            <img src="./images/tablet.jpg" alt="Мобільні додатки">
+                        </picture>
                         <p class="services__description">Дизайнерські рішення</p>
                     </li>
                 </ul>
